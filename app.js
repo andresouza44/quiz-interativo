@@ -6,17 +6,17 @@ const questions = form.querySelectorAll('p')
 
 let score = 0;
 
-const getUserAnswers = () => {
-    let userAnswers = []
+const getUserAnswers = () => corretAnswers.map((_, index)=>
+    form[`inputQuestion${index+1}`].value  )   
 
-    corretAnswers.forEach((_, index)=>{
-        const userAnswer = form[`inputQuestion${index+1}`].value
-        userAnswers.push(userAnswer)
+/* - versão menos resuzida para fins didáticos:
+const getUserAnswers = () => {
+    const userAnswers = corretAnswers.map((_, index)=>{
+        return form[`inputQuestion${index+1}`].value    
     })   
     return userAnswers
-
 }
-
+*/
 const calculateUserScore = (userAnswer) => {
     userAnswer.forEach((userAnswer, index) =>{
         const question = questions[index]
