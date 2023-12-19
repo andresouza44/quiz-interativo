@@ -51,13 +51,14 @@ const animateFinalScore = () => {
     
 }
 
+const resetUserScore = () => score=0
+
 const quiz = event =>{
     event.preventDefault();
-   
     score = 0
-   
     const userAnswer = getUserAnswers() 
    
+    resetUserScore ()
     calculateUserScore(userAnswer)
     showFinalScore()
     animateFinalScore();
