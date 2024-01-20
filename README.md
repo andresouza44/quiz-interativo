@@ -1,4 +1,4 @@
-## Quiz para estudos de Java Script.
+## Quiz em Java Script.
 
 [Clique aqui para acessar a página do projeto.](<https://quiz-movies.netlify.app/>)
 
